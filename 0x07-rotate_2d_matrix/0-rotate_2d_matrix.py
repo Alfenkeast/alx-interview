@@ -31,3 +31,4 @@ def rotate_2d_matrix(matrix):
     for row in range(N):
         for column in range(N):
             matrix[row][column] = matrix_copy[row][column]
+            
