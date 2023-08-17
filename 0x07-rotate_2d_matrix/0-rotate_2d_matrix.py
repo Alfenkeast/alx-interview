@@ -30,5 +30,4 @@ def rotate_2d_matrix(matrix):
     # since matrix is NxN, do not need to resize matrix for rotation
     for row in range(N):
         for column in range(N):
-            matrix[row][column] = matrix_copy[row][column]
-            
+            matrix[row][column] = matrix_copy[row][column]           
