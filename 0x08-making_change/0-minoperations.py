@@ -1,14 +1,27 @@
 #!/usr/bin/python3
+""" Script that computes a minimum operations
+    needed in a CopyAll - Paste task
+"""
 
-def makeChange(coins, total):
-    if total <= 0:
+
+def minOperations(n):
+    """
+    Method for compute the minimum number
+    of operations for task Copy All and Paste
+
+    Args:
+        n: input value
+        factor_list: List to save the operations
+    Return: the sum of the operations
+    """
+    if n < 2:
         return 0
-    dp = [float('inf')] * (total + 1)
-    dp[0] = 0
-    for coin in coins:
-        for amount in range(coin, total + 1):
-            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
-    if dp[total] == float('inf'):
-        return -1
-    else:
-        return dp[total]
+    factor_list = []
+    i = 1
+    while n != 1:
+        i += 1
+        if n % i == 0:
+            while n % i == 0:
+                n /= i
+                factor_list.append(i)
+    return sum(factor_list)
