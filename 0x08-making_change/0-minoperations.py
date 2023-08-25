@@ -12,9 +12,3 @@ def makeChange(coins, total):
         return -1
     else:
         return dp[total]
-
-
-coins = [1, 2, 5]
-total = 11
-result = makeChange(coins, total)
-print(result)
