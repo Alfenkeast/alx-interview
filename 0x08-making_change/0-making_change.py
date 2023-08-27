@@ -14,4 +14,3 @@ def makeChange(coins, total):
     if dp[total] == floar('inf'):
         return -1
     return dp[total]
-
